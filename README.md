@@ -1,2 +1,2 @@
 # learn
-something with less value and created for learing
+something with less value and created for STUDY
