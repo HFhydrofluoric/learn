@@ -1,0 +1,25 @@
+<% include include.ejs%>
+<link rel="stylesheet" href="stylesheets/user.css" />
+<script src="javascripts/user.js"></script>
+<head>
+<body>
+	<% include header.ejs %>
+	<div class="user">
+		<% for(var i = 0; i < myBlogs.length; i++) { %>
+			<div class="blog">
+				<h3>
+					<%=myBlogs[i].title %>
+					<span id="<%= myBlogs[i].id %>" class="changeBlog">
+						<a href="#" class="delete">delete</a>
+						<a href="update" class="change">change</a>
+					</span>
+				</h3>
+				<p><%=myBlogs[i].message %></p>
+				<div>
+					<span><%=myBlogs[i].meta.updateTime %></span>
+				</div>
+			</div>
+		<% } %>
+	</div>	
+</body>
+</html>	

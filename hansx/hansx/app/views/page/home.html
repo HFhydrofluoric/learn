@@ -1,0 +1,13 @@
+<div>
+	<div class="blogs left col-md-8">
+		<div ng-repeat="blogs in blogs"  class="blogsViews">
+			<a href="#viewPage/{{blogs._id}}" id="{{blogs._id}}">
+				<div ng-bind-html="blogs.content | htmlslice"></div>
+			</a>
+			<p>{{blogs.time}}</p>
+		</div>
+	</div>	
+	<div class="right col-md-4">
+		<div class="first"></div>
+	</div>
+</div>

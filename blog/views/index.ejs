@@ -1,0 +1,36 @@
+<% include include.ejs%>
+<link rel="stylesheet" href="stylesheets/index.css" />
+<script src="javascripts/index.js"></script>
+<head>
+<body>
+	<% include header.ejs %>
+	<div class="index">
+		<div>
+			<% if(!user) { %>
+				<h1><%= title%></h1>
+				<p>welcome to my blog</p>
+				<form>
+					<input type="button" value="登录" class="btn btn-primary login" />
+					<input type="button" value="立即注册" class="btn register" />
+				</form>
+			<% } else { %> 
+				<h1>hello,<%=user %></h1>
+				<input type="button" value="我的博客" class="btn btn-primary" id="myBlog" />
+				<input type="button" value="退出登录" class="btn" id="logout" />
+			<% } %>
+		</div>
+		<div>
+			<% for(var i = 0; i < blogs.length; i++) { %>
+				<div class="blog">
+					<h3><%=blogs[i].title %></h3>
+					<p><%=blogs[i].message %></p>
+					<div>
+						<span><%=blogs[i].meta.updateTime %></span>---
+						<span><%=blogs[i].doctor %></span>
+					</div>
+				</div>
+			<% } %>
+		</div>	
+	</div>
+</body>
+</html>	

@@ -1,0 +1,26 @@
+{
+  "name": "lol_spider",
+  "version": "1.0.1",
+  "description": "爬取lol英雄",
+  "main": "about.js",
+  "scripts": {
+    "test": "没有搞定顺序加载"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrGitHan/spider-.git"
+  },
+  "author": "ｈａｎｆｅｎｇ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrGitHan/spider-/issues"
+  },
+  "homepage": "https://github.com/MrGitHan/spider-#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "events": "^1.1.0",
+    "fs": "0.0.2",
+    "mongoose": "^4.4.12",
+    "request": "^2.70.0"
+  }
+}

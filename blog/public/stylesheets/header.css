@@ -1,0 +1,28 @@
+.header {
+	background-color: #333;
+	height: 50px;
+	width: 100%;  
+	box-shadow: 2px 2px 2px #000;
+	margin-bottom: 2px;
+	line-height: 50px;
+}
+	.header p, .header a {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.header p {
+		color: #fff;
+		margin: 0;
+		padding: 0 20px;
+		font-size: 25px;
+	}
+	.header a {
+		padding: 0 10px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.header a:hover {
+		background-color: black;
+		color: #fff;
+	}

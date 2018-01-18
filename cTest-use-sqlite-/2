@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int menu()
+{
+    int flag = 0;
+    printf("**************************************主菜单*****************************************\n");
+    printf("（1）系统管理菜单\n");
+    printf("（2）出入库管理菜单\n");
+    do {
+        printf("请输入1或2选择菜单：");
+        scanf("%d", &flag);
+        if (flag != 1 && flag != 2)
+        {
+            printf("输入格式错误，请重新输入\n");
+        }
+    } while (flag != 1 && flag != 2);
+    if (flag == 1)
+    {
+        printf("选择菜单1");
+    } else {
+        printf("选择菜单2");
+    }
+    return 0;
+}

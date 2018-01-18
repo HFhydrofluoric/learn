@@ -1,0 +1,11 @@
+<div class="header">
+	<p>Blog</p>
+	<a href="/">首页</a>
+	<% if(user) { %>
+		<a href="addMsg">发表博客</a>
+		<a href="user" id="user" class="<%= id %>"><%= user %></a>
+	<% } else { %> 
+		<a href="login">登入</a>
+		<a href="reg">注册</a>
+	<% } %>
+</div>

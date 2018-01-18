@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>airline</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../stylesheets/base/base.css" />
+	<link rel="stylesheet" href="../stylesheets/index.css" />
+	<link rel="stylesheet" href="../plugins/date/daterangepicker.css" />
+</head>
+<body>
+	<div id="header">
+		<a href="/"><span style="color: #fff;">航空订票系统</span></a>
+		<ul>
+			<li class="signIn"><a href="#" data-toggle="modal"  data-target="#myModal">登录</a></li>
+			<li class="signOut"><a href="#" data-toggle="modal"  data-target="#myModal">注册</a></li>
+		</ul>
+		<ul style="display: none;">
+			<span id="user"><a href="#" class="aboutUser" data-toggle="modal" data-target="#userModal"></a></span>
+			<a href="javascript:;" id="logout">logout</a>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="search" style="position: absolute;">
+			<form>
+				<span class="choose" style="display: none;">
+					<label for="flight">
+						<input type="radio"  name="flight" checked="true" />
+						单程
+					</label>
+					<label for="flight">
+						<input type="radio" name="flight" />
+						往返
+					</label>
+				</span>
+				<span>
+					<input type="text" placeholder="出发" class="form-control" id="from" readonly="readonly" />
+					<input type="text" placeholder="日期" class="form-control start" name="daterange" readonly="readonly" />
+				</span>
+				<span>
+					<input type="text" placeholder="到达" class="form-control" id="to" readonly="readonly" />
+					<input type="text" placeholder="日期" class="form-control end" name="daterange" disabled="disabled" readonly="readonly" />
+				</span>
+				<span class="searchBotton">
+					<input type="button" class="form-control"  value="搜索" />
+				</span>
+			</form>
+		</div>
+		<div id="scrollContent">
+			<div id="scroll">
+				<ul>
+					<li repeat="scroll" class="scroller">
+						<span>{{scroll.desc}}</span>
+						<img src="{{scroll.src}}" alt="tupian" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="list">
+		<table class="table	table-bordered table-hover table-condensed">
+			<thead>
+            <th style="width: 150px;">航班</th>
+            <th>出发地</th>
+            <th>目的地</th>
+            <th>日期</th>
+            <th>时间</th>
+            <th style="width: 80px;">已订票</th>
+            <th style="width: 80px;">剩余票数</th>
+            <th>票价</th>
+            <th>订票</th>
+        </thead>
+        <tbody>
+            <tr class="flys" repeat="flight" name="{{flight._id}}">
+                <td>{{flight.fly}}</td>
+                <td>{{flight.from}}</td>
+                <td>{{flight.to}}</td>
+                <td>{{flight.date}}</td>
+                <td>{{flight.time}}</td>
+                <td>{{flight.amount}}</td>
+                <td>{{flight.last}}</td>
+                <td>{{flight.moneny}}</td>
+                <td>
+                	<input type="button" value="购买"  class="form-control buy"/>
+                </td>
+            </tr>
+       </tbody>
+	</div>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               模态框（Modal）标题
+	            </h4>
+	         </div>
+	        <form>
+	        	 <div class="modal-body">
+		         在这里添加一些文本
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default" 
+		               data-dismiss="modal">关闭
+		            </button>
+		            <button type="button" class="btn btn-primary sure submit">
+		               确定
+		            </button>
+		            <!-- <input type="submit" class="form-control submit" value="确定" style="width: 50px;float: right;background-color: green;color: white;margin-left: 5px;" /> -->
+		         </div>
+	        </form>
+	      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+		<!-- 模态框（Modal） -->
+	<div class="modal fade" id="buyModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               购票
+	            </h4>
+	         </div>
+	        <form>
+	        	 <div class="modal-body">
+		         	<input type="text" class="form-control" placeholder="身份证号" />
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default" 
+		               data-dismiss="modal">关闭
+		            </button>
+		            <button type="button" class="btn btn-primary sureBuy">
+		               确定
+		            </button>
+		         </div>
+	        </form>
+	      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+		<!-- 模态框（Modal） -->
+	<div class="modal fade" id="userModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="userTitle" aria-hidden="true">
+	   <div class="modal-dialog reset">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="userTitle">
+	               购票记录
+	               <span>
+	               	<span class="moneny" repeat="user" style="float: right;margin-right: 100px;">余额:{{user.moneny}}</span>
+	               </span>
+	            </h4>
+	         </div>
+	        <form>
+	        	 <div class="modal-body v-table">
+		         	<div class="title">
+		         		<span style="width: 15%;">航班</span>
+			            <span style="width: 15%;">出发地</span>
+			            <span style="width: 15%;">目的地</span>
+			            <span style="width: 15%;">日期</span>
+			            <span style="width: 15%;">时间</span>
+			            <span style="width: 15%;">票价</span>
+			            <span style="width: 10%;">退票</span>
+		         	</div>
+		         	<div>
+		         		<div repeat="userList" class="userList" name="{{userList._id}}">
+			         		<span>{{userList.fly}}</span>
+			                <span>{{userList.from}}</span>
+			                <span>{{userList.to}}</span>
+			                <span>{{userList.date}}</span>
+			                <span>{{userList.time}}</span>
+			                <span>{{userList.moneny}}</span>
+		                	 <input style="width: 10%;height: 20px;background-color: #337ab7;
+    border-color: #2e6da4;color: #fff;line-height: 20px;padding: 0;" type="button" class="form-control bounce" value="退票" />
+			         	</div>
+		         	</div>
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default" 
+		               data-dismiss="modal">关闭
+		            </button>
+		           <!--  <button type="button" class="btn btn-primary sure">
+		               确定
+		            </button> -->
+		            <!-- <input type="submit" class="form-control submit" value="确定" style="width: 50px;float: right;background-color: green;color: white;margin-left: 5px;" /> -->
+		         </div>
+	        </form>
+	      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="alert" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               提示
+	            </h4>
+	         </div>
+	        <form>
+	        	 <div class="modal-body">
+		         	<span></span>
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default ifClose" 
+		               data-dismiss="modal" style="display: none;">关闭
+		            </button>
+		            <button type="button" class="btn btn-primary ifShow" style="display: none;">
+		               刷新
+		            </button>
+		         </div>
+	        </form>
+	      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+</body>
+</html>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script>
+	jQuery.noConflict();
+</script>
+<script src="../javascripts/base.js"></script>
+<script src="../javascripts/sign.js"></script>
+<script src="../javascripts/index.js"></script>
+<script src="../javascripts/scroll.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../plugins/date/moment.min.js"></script>
+<script src="../plugins/date/daterangepicker.js"></script>
+<script src="../plugins/city/lazyload.js"></script>
+<script>
+	// date
+	jQuery('input[name="daterange"]').daterangepicker({
+	    singleDatePicker: true,
+	    locale: {
+	      format: 'YYYY-MM-DD'
+	    },
+	    startDate: new Date()
+	});
+	// city
+ 	LazyLoad.css(["../plugins/city/city.css"], function () {
+	        LazyLoad.js(["../plugins/city/city.js"], function () {
+	            var fr = new citySelector.cityInit("from");
+	            var to = new citySelector.cityInit("to");
+	        });
+	});
+
+</script>

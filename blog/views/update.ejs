@@ -1,0 +1,17 @@
+<% include include.ejs %>
+<link rel="stylesheet" href="stylesheets/update.css" />
+<script src="javascripts/update.js"></script>
+</head>
+<body>
+	<% include header.ejs %>	
+	<div class="update">
+		<form>
+			<label for="title">title : &nbsp;</label>
+			<input type="text" name="title" id="title" class="form-control" value="<%= blogTitle %>">
+			<label for="message">message : </label>
+			<textarea name="message" id="message" cols="30" rows="10" class="form-control"><%= message %></textarea>
+			<button id="submit" class="btn btn-primary" onclick="return false">sure</button>
+		</form>
+	</div>
+</body>
+</html>

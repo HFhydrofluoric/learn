@@ -1,0 +1,17 @@
+.addBlogs input,
+.addBlogs select {
+	margin-top: 20px !important;
+	float: left !important;
+	width: 47%;
+}
+.addBlogs input {
+	margin-right: 50px;
+	background-color: #0A980A;
+	color: #fff;
+}
+.addBlogs input:hover {
+	background-color: #074407;
+}
+.addBlogs textarea {
+	min-height: 550px;
+}

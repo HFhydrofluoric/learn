@@ -1,0 +1,24 @@
+<div id="usesrManage">
+	<table class="table table-bordered	">
+		<thead>
+			<th>姓名</th>
+			<th>email</th>
+			<th>余金</th>
+			<th>订票数</th>
+			<th>修改</th>
+		</thead>
+		<tbody>
+			<tr repeat="user" class="user" name="{{user._id}}">
+				<td><a href="#" data-toggle="modal" data-target="#userModal">{{user.name}}</a></td>
+				<td>{{user.email}}</td>
+				<td><input type="text" value="{{user.moneny}}" class="form-control" /></td>
+				<td>{{user.order}}</td>
+				<td class="userButton">
+					<input type="button" class="form-control" value="sure" />
+					<!-- <input type="button" class="form-control" value="delete" /> -->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="page"></div>
+</div>

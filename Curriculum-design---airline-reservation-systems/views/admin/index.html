@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>admin</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../stylesheets/base.css" />
+	<link rel="stylesheet" href="../stylesheets/admin/admin.css" />
+	<link rel="stylesheet" href="../plugins/date/daterangepicker.css" />
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li><a href="#flight">航班管理</a></li>
+			<li><a href="#scroll">轮播管理</a></li>
+			<li><a href="#userManage">会员管理</a></li>
+			<!-- <li><a href="#adminManage">管理员管理</a></li> -->
+			<li><a href="#bussiness">交易动态</a></li>
+		</ul>
+	</div>
+	<div id="right">
+		<div id="head">
+			<span>您好</span>
+			<span>
+				<span id="admin" repeat="admin">{{admin.name}}</span>
+			</span>
+			<span><a href="javascript:;" id="logOut">退出登录</a></span>
+		</div>
+		<div id="src"></div>
+	</div>
+		<!-- 模态框（Modal） -->
+	<div class="modal fade" id="userModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="userTitle" aria-hidden="true">
+	   <div class="modal-dialog reset">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="userTitle">
+	               购票记录
+	            </h4>
+	         </div>
+	        <form>
+	        	 <div class="modal-body v-table">
+		         	<div class="title">
+		         		<span style="width: 15%;">航班</span>
+			            <span style="width: 15%;">出发地</span>
+			            <span style="width: 15%;">目的地</span>
+			            <span style="width: 20%;">日期</span>
+			            <span style="width: 20%;">时间</span>
+			            <span style="width: 15%;">票价</span>
+		         	</div>
+		         	<div>
+		         		<div repeat="userList" class="userList">
+			         		<span style="width: 15%;">{{userList.fly}}</span>
+			                <span style="width: 15%;">{{userList.from}}</span>
+			                <span style="width: 15%;">{{userList.to}}</span>
+			                <span style="width: 20%;">{{userList.date}}</span>
+			                <span style="width: 20%;">{{userList.time}}</span>
+			                <span style="width: 15%;">{{userList.moneny}}</span>
+			         	</div>
+		         	</div>
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default ifClose" 
+		               data-dismiss="modal">关闭
+		            </button>
+		           <!--  <button type="button" class="btn btn-primary sure">
+		               确定
+		            </button> -->
+		         </div>
+	        </form>
+	      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+		<!-- 模态框（Modal） -->
+	<div class="modal fade" id="alert" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               提示
+	            </h4>
+	         </div>
+	        <form>
+	        	 <div class="modal-body">
+		         	<span></span>
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default ifClose" 
+		               data-dismiss="modal" style="display: none;">关闭
+		            </button>
+		            <button type="button" class="btn btn-primary ifShow" style="display: none;">
+		               刷新
+		            </button>
+		         </div>
+	        </form>
+	      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+</body>
+</html>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script>
+	jQuery.noConflict();
+</script>
+<script src="../javascripts/page.js"></script>
+<script src="../javascripts/base.js"></script>
+<script src="../javascripts/admin/index.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../plugins/date/moment.min.js"></script>
+<script src="../plugins/date/daterangepicker.js"></script>
+<script src="../plugins/city/lazyload.js"></script>
+<script>
+	// date
+	jQuery('input[name="daterange"]').daterangepicker({
+	    singleDatePicker: true,
+	    locale: {
+	      format: 'YYYY-MM-DD'
+	    },
+	    startDate: new Date()
+	});
+	// city
+ 	LazyLoad.css(["../plugins/city/city.css"], function () {
+	        LazyLoad.js(["../plugins/city/city.js"], function () {
+	            var fr = new citySelector.cityInit("from");
+	            var to = new citySelector.cityInit("to");
+	        });
+	});
+
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="login">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="app/styles/base/base.css" />
+	<link rel="stylesheet" href="app/styles/admin/usr.css" />
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="app/scripts/app.js"></script>
+	<script src="app/scripts/admin/controllers/login.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="loginCol">
+		<div class="login">
+			<a href="/">
+				<img src="app/images/admin/user.jpg" alt="hanfeng" />
+			</a>
+			<form>
+				<input type="text" class="form-control" placeholder="name" ng-model="login.name" />
+				<input type="password" class="form-control" placeholder="password" ng-model="login.pass" />
+				<input type="button" class="form-control submit" value="submit" sure />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

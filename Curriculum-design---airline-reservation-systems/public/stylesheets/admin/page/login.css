@@ -1,0 +1,39 @@
+body {
+	/*background-image: url('../../../images/bg.jpg');*/
+	/*background-size: 100%;*/
+}
+#login {
+	width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+}
+/*	#login img {
+		display: inline-block;
+		width: 200px;
+	}*/
+	#login form{
+		display: inline-block;
+		padding: 50px;
+		width: 330px;
+		height: 300px;
+		/*position: relative;
+		left: 300px;
+		top: 100px;*/
+		margin-top: 100px;
+		background: rgba(9,7,116,0.52);
+		border-radius: 5px;
+	}
+		#login input {
+			margin-top: 30px; 
+		}
+		#login .submit {
+			transition: background-color 0.5s linear;
+			background-color: #0BB90B;
+			color: #fff;
+			font-weight: bold;
+			box-shadow: 0 0 5px 0 #0BB90B;
+		}
+			#login .submit:hover {
+				transition: background-color 0.5s linear;
+				background-color: #087908;
+			}

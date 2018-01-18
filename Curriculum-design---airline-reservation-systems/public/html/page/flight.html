@@ -1,0 +1,51 @@
+<div id="flight">
+    <table class="table table-striped">
+        <thead>
+            <th style="width: 10%">航班</th>
+            <th>飞机号</th>
+            <th>出发地</th>
+            <th>目的地</th>
+            <th>日期</th>
+            <th>时间</th>
+            <th style="width: 10%;">订票数</th>
+            <th>剩余票数</th>
+            <th>票价</th>
+        </thead>
+        <tbody>
+            <tr class="flys" repeat="flight" name="{{flight._id}}">
+                <td><input readonly="true" model class="form-control" type="text" value="{{flight.fid}}" /></td>
+                <td><input readonly="true" model class="form-control" type="text" value="{{flight.fly}}" /></td>
+                 <td><input readonly="true" model class="form-control" type="text" value="{{flight.from}}" /></td>
+                <td><input readonly="true" model class="form-control" type="text" value="{{flight.to}}" /></td>
+                <td><input readonly="true" model class="form-control" type="text" name="daterange" value="{{flight.date}}" /></td>
+                <td><input readonly="true" model class="form-control" type="time" value="{{flight.time}}" /></td>
+                <td><input readonly="true" class="form-control" type="text" value="{{flight.amount}}" /></td>
+                <td><input readonly="true" model class="form-control" type="text" value="{{flight.last}}" /></td>
+                <td><input readonly="true" model class="form-control" type="text" value="{{flight.moneny}}" /></td>
+                <td><input readonly="true" class="form-control change" type="button" value="修改" /></td>
+                <td class="hidden">
+                    <input readonly="true" class="form-control ifSure" type="button" value="确定" />
+                    <input readonly="true" class="form-control cancle" type="button" value="取消" />
+                     <input readonly="true" class="form-control delete" type="button" value="删除" />
+                </td>
+            </tr>
+        </tbody>
+            <tr class="ignore">
+                <td><input model class="form-control" type="text" /></td>
+                <td><input model class="form-control" type="text" /></td>
+                <td><input model class="form-control" type="text" id="from" readonly="readonly" /></td>
+                 <td><input model class="form-control" type="text" id="to" readonly="readonly" /></td>
+                <td><input model class="form-control" type="text" name="daterange" readonly="readonly" /></td>
+                <td><input model class="form-control" type="time" /></td>
+                <td>0</td>
+                <td><input model class="form-control" type="text" /></td>
+                <td><input model class="form-control" type="text" /></td>
+                <td><input  class="form-control add" type="button" value="添加" /></td>
+                <td class="hidden">
+                    <input class="form-control ifSure" type="button" value="确定" />
+                    <input class="form-control cancle" type="button" value="取消" />
+                </td>
+            </tr>
+    </table>
+    <div id="page"></div>
+</div>

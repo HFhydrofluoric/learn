@@ -1,0 +1,36 @@
+.index {
+	width: 1024px;
+	height: auto;  
+	background-color: #F7F6F6;
+	margin: 0 auto;
+	border-radius: 5px;
+	border: 1px solid #666;
+	padding: 15px 30px 30px;
+	margin-top: 20px;
+}
+	.index .blog {
+		width: 230px;
+		display: inline-block;
+	}
+		.index .blog h3 {
+			background-color: #337AB7;
+			color: #fff;
+			padding: 5px;
+			box-shadow: 1px 1px 1px blue;
+			margin-bottom: 0;
+		}
+		.index .blog p {
+			height: 150px;
+			overflow: hidden;
+			background-color: #fff;
+			box-shadow: 1px 1px 1px  #fff;
+			margin: 0;
+			padding: 5px;
+		}
+		.index .blog div {
+			background-color: #666;
+			box-shadow: 1px 1px 1px  #666;
+			padding: 5px;
+			color: #fff;
+		}
+

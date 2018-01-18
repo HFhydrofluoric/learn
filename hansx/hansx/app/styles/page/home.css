@@ -1,0 +1,26 @@
+.blogs{
+}
+	.blogs>div {
+		min-height: 50px;
+		background-color: #fff;
+		margin-bottom: 15px;
+	}
+		.blog .right {
+			height: 1024px;
+		}
+		.first {
+			height: 100px;
+			background-color: #7F9BC0;
+		}
+		.blogsViews {
+			padding: 10px;
+		}
+			.blogsViews a {
+				color: #666;
+			}
+			.blogsViews a:hover {
+				color: #337ab7;
+			}
+			.blogsViews blockquote {
+				border: 0;
+			}

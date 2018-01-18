@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="usrApp">
+<head>
+	<meta charset="UTF-8">
+	<title>hanefeng</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="app/styles/base/base.css" />
+	<link rel="stylesheet" href="app/styles/admin/usr.css" />
+	<link rel="stylesheet" href="app/styles/admin/page/addBlogs.css" />
+	<link rel="stylesheet" href="app/styles/admin/page/comment.css" />
+	<link rel="stylesheet" href="app/styles/admin/page/myself.css" />
+	<link rel="stylesheet" href="app/styles/admin/page/navSet.css" />
+	<link rel="stylesheet" href="app/styles/admin/page/viewBlogs.css" />
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="app/scripts/app.js"></script>
+	<script src="app/scripts/admin/usrRouter.js"></script>
+	<script src="app/scripts/admin/controllers/usr.js"></script>
+</head>
+<body>
+	<div nav></div>
+	<div ui-view="usr" class="right col-md-10" ng-controller="addBlogs"></div>
+</body>
+</html>

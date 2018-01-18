@@ -1,0 +1,169 @@
+body {
+	padding: 0;
+}
+#header {
+	height: 40px;
+	padding: 0 10px;
+	line-height: 40px;
+	background-color: #7F9BC0;
+	overflow: hidden;
+}
+#header ul {
+	float: right;
+	padding-right: 20px; 
+}
+#header li {
+	display: inline-block;
+}
+#header li a {
+	color: #fff;
+}
+/*登录注册*/
+#header input[type=checkbox] {
+	width: auto !important;
+}
+#header a {
+	color: #fff;
+}
+#myModal .modal-content {
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+#myModal input[class='form-control'] {
+	margin-bottom: 5px;
+}
+/*登录注册end*/
+/*search*/
+#search form {
+	    width: 500px;
+	    background-color: #f4fbfc;
+	    margin: 30px 0 0 80px;
+	    padding: 20px;
+	    border: 5px solid #7F9BC0;
+}
+#search form label {
+	width: 100px;
+}
+#search form label input,
+#search form label span {
+	float: left;
+	vertical-align: middle;
+	margin: 0;
+}
+#search form span {
+	display: block;
+}
+#search form input {
+	width: 45%;
+	display: inline-block;
+	margin: 10px;
+	background-color: #fff;
+}
+#search .searchBotton {
+	text-align: center;
+}
+#search input[type=button] {
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: bold;
+	background-color: #FF9500;
+	color: #fff;
+}
+#search input[disabled=disabled] {
+	background-color: #E9E5E5;
+}
+#search input[type=button]:hover {
+	background-color: orange;
+}
+#list {
+	/*display: none;*/
+}
+
+#list table thead {
+	background-color: #7F9BC0;
+	color: #fff;
+}
+#list table th {
+	text-align: center;
+}
+/*search end*/
+#content {
+	width: 1300px;
+	margin: 0 auto;
+}
+/*scroll start*/
+#scrollContent {
+	width: 600px;
+	overflow: hidden;
+	float: right;
+	margin-right: 100px;
+}
+#scroll {
+	/*width: 1000px;*/
+	height: 270px;
+	overflow: hidden;
+	margin-left: 0px;
+	white-space: nowrap;
+}
+/*#scroll ul {
+	position: relative;
+	left: 50%;
+	z-index: -100;
+}*/
+#scroll li {
+	/*display: block;*/
+	width: 600px;
+	float: left;
+	position: relative;
+	top: 30px;
+}
+#scroll li span {
+	position: absolute;
+	left: 10%;
+	top: 60%;
+	z-index: 100;
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: #fff;
+	opacity: 0.6;
+}
+#scroll li img {
+	height: 212px;
+}
+/*scroll end*/
+/*userlist start*/
+.reset {
+	width: 100%;
+}
+.v-table {
+	max-height: 600px;
+	overflow-y: scroll;
+}
+.v-table .title {
+	background-color: #26b4d3;
+}
+}
+.v-table .title span {
+	text-align: center;
+}
+.v-table div {
+	overflow: hidden;
+}
+.v-table span {
+	display: inline-block;
+	float: left;
+	border: 1px solid #666;
+	padding: 2 5px;
+}
+.userList span {
+	width: 15%;
+	height: 100%;
+	line-height: 100%;
+}
+/*userlist end*/
+#list td {
+	line-height: 45px;
+	text-align: center;
+}

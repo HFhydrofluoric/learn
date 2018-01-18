@@ -1,0 +1,62 @@
+.user {
+	width: 1024px;
+	height: auto;  
+	background-color: #F7F6F6;
+	margin: 0 auto;
+	border-radius: 5px;
+	border: 1px solid #666;
+	padding: 15px 30px 30px;
+	margin-top: 20px;
+}
+	.user .blog {
+		width: 230px;
+		display: inline-block;
+	}
+		.user .blog h3 {
+			background-color: #337AB7;
+			color: #fff;
+			padding: 5px;
+			box-shadow: 1px 1px 1px blue;
+			margin-bottom: 0;
+			position: relative;
+			overflow: hidden;
+		}
+		.user .blog p {
+			height: 150px;
+			overflow: hidden;
+			background-color: #fff;
+			box-shadow: 1px 1px 1px  #fff;
+			margin: 0;
+			padding: 5px;
+		}
+		.user .blog div {
+			background-color: #666;
+			box-shadow: 1px 1px 1px  #666;
+			padding: 5px;
+			color: #fff;
+		}
+		.user .changeBlog {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			background-color: #fff;
+			opacity: 0.9;
+			display: none;
+		}
+			.user .changeBlog a {
+				text-decoration: none;
+				width: 45%;
+				text-align: center;
+				line-height: 36px;
+				height: 100%;
+				display: inline-block;
+			}
+
+		.user .blog h3:hover .changeBlog {
+			display: block;
+			cursor: pointer;
+		}
+

@@ -1,0 +1,18 @@
+<% include include.ejs %>
+<link rel="stylesheet" href="stylesheets/reg.css" />
+<script src="javascripts/reg.js"></script>
+</head>
+<body>
+	<% include header.ejs %>
+	<div class="reg">
+		<div><%=title %></div>
+		<form>
+			<label for="name">name</label>
+			<input type="text" id="name" name="name" class="form-control"> 
+			<label for="passowrd">passowrd</label>
+			<input type="password" id="password" name="passowrd" class="form-control"> 
+			<button id="submit" class="btn btn-primary" onclick="return false"><%=title %></button>
+		</form>
+	</div>	
+</body>
+</html>

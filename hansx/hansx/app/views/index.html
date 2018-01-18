@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appApp">
+<head>
+	<meta charset="UTF-8">
+	<title>blogs</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="app/styles/base/base.css" />
+	<link rel="stylesheet" href="app/styles/common/main.css" />
+	<link rel="stylesheet" href="app/styles/page/home.css" />
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="app/scripts/app.js"></script>
+	<script src="app/scripts/router.js"></script>
+	<script src="app/scripts/controllers/main.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="page">
+		<div header></div>
+		<div ui-view="indexPage"></div>
+		<div footer></div>
+	</div>
+</body>
+</html>

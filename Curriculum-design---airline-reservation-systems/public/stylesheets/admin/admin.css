@@ -1,0 +1,149 @@
+/*base*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+body {
+	font: 15px 'sans-seri';
+}
+
+ul,li {
+	list-style-type: none;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+}
+input[type="button"] {
+	background-color: green !important;
+	color: #fff !important;
+}
+/*base end*/
+/*nav*/
+#nav {
+	width: 150px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	padding-top: 5em;
+	background-color: #7F9BC0;
+}
+#nav a {
+	width: 100%;
+	height: 2.2em;
+	display: inline-block;
+	line-height: 2.2em;
+	text-align: center;
+	color: #fff;
+}
+#nav a.living,
+#nav a:hover {
+	background-color: #fff;
+	color: #7F9BC0;
+}
+/*nav end*/
+/*right*/
+#right {
+	padding-left: 150px;
+}
+#right #head {
+	position: fixed;
+	left: 150px;
+	right: 0;
+	top: 0;
+	padding: 10px 15px;
+	text-align: right;
+	background-color: #333;
+	color: #fff;
+}
+.hidden {
+	display: none;
+}
+#src {
+	padding-top: 50px;
+}
+/*right end*/
+/*scroll start*/
+#scroll {
+	padding: 20px;
+}
+#scroll img {
+	display: inline-block !important;
+	margin-bottom: 0 !important;
+	cursor: pointer;
+}
+#scroll .addImg {
+	width: 100px;
+	cursor: pointer;
+}
+#scroll .uploadImg {
+	display: none !important;
+}
+#scroll .scrollImg {
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+}
+#scroll .preview a {
+	padding: 10px;
+	color: #fff;
+	background-color: #337ab7;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 0 #666;
+}
+/*scroll end*/
+/*usermanage start*/
+#usesrManage .userButton {
+	width: 15%;
+}
+#usesrManage .userButton [class='form-control'] {
+	float: left;
+	width: 32% !important;
+	height: 25px;
+	line-height: 25px;
+	padding: 0;
+	margin-right: 2px;
+}
+.user td {
+	width: 20%;
+}
+/*usermanage end*/
+/*userlist start*/
+.reset {
+	width: 100%;
+}
+.v-table {
+	max-height: 600px;
+	overflow-y: scroll;
+}
+.v-table .title {
+	background-color: #26b4d3;
+}
+}
+.v-table .title span {
+	text-align: center;
+}
+.v-table div {
+	overflow: hidden;
+}
+.v-table span {
+	display: inline-block;
+	float: left;
+	border: 1px solid #666;
+	padding: 2 5px;
+}
+.userList span {
+	width: 15%;
+	height: 100%;
+	line-height: 100%;
+}
+/*userlist end*/
+#page {
+	text-align: center;
+}
